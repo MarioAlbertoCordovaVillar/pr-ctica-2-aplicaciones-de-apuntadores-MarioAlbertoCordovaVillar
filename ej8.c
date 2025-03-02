@@ -1,0 +1,17 @@
+#include <stdio.h>
+void intercambiar(int *a,int *b) {
+	int temp=*a;
+	*a=*b;
+	*b=temp;
+    
+}
+
+int main(void) {
+	int arr[2] ={5,10};
+	int *ptr;
+	ptr=arr;
+    printf("El arreglo original es:%i,%i\n",arr[0],arr[1]);
+    intercambiar(ptr,(ptr+1));
+    printf("Los nuevos valores son %i,%i\n",arr[0],arr[1]);
+    return 0;
+}
